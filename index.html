@@ -18,20 +18,22 @@
     <header class="navbar navbar-dark bg-dark mb-3">
         <div class="container">
             <a href="/" class="navbar-brand">Github Bulucu</a>
-            <button class="btn btn-light">Koyu Mod</button>
+            <button id="theme-btn" class="btn btn-light">Koyu Mod</button>
         </div>
     </header>
     <!-- Navbar End -->
 
     <!-- Form Start -->
     <div class="container">
+        <div id="alert"></div>
+
         <div class="border p-3">
             <h1>Github Kullanıcı Adını Ara</h1>
             <p>Kullanıcı bilgilerine erişmek için bir kullanıcı adı giriniz.</p>
 
             <div class="d-flex gap-3">
-                <input class="form-control" type="text">
-                <button class="btn btn-primary btn-lg">Ara</button>
+                <input id="search-input" class="form-control" type="text">
+                <button id="search-button" class="btn btn-primary btn-lg">Ara</button>
             </div>
         </div>
 
@@ -39,37 +41,17 @@
     <!-- Form End -->
 
     <!-- Account info start -->
-    <div class="container">
-        <div class="row border p-4">
-            <!-- left -->
-            <div class="col-md-3">
-                <img class="img-fluid" src="https://picsum.photos/200" alt="">
-
-                <a class="btn btn-primary my-4 w-100" href="">Profili Göster</a>
-            </div>
-
-            <!-- right -->
-            <div class="col-md-9">
-                <span class="badge bg-primary fs-6 mt-1">Açık Repolar:19</span>
-                <span class="badge bg-secondary fs-6 mt-1">Açık Gistler:19</span>
-                <span class="badge bg-success fs-6 mt-1">Takipçiler:19</span>
-                <span class="badge bg-info fs-6 mt-1">Takip Edilenler:19</span>
-
-                <ul class="list-group mt-5">
-                    <li class="list-group-item">Hakkında:</li>
-                    <li class="list-group-item">Şirket:</li>
-                    <li class="list-group-item">Website:</li>
-                    <li class="list-group-item">Konum:</li>
-                    <li class="list-group-item">Hesap Oluşturma:</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+    <div class="container p-3" id="profile"></div>
     <!-- Account info end -->
 
+    <!-- Repositories Start -->
+    <div class="container  p-3" id="repos">
+        
+    </div>
+    <!-- Repositories Ends -->
+
     <!-- Javascript cdnjs -->
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
 </body>
 
 </html>
