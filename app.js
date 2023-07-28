@@ -42,8 +42,9 @@ function getInput(){
         github.getUser(searchInput.value)
         .then((data)=>{
             if(data.profile.message==="Not Found"){
-                alert(data.message);
+                ui.showAlert("Aradığınız kullanıcı bulunamadı.","alert-danger");
             }else{
+                ui.showAlert("Kullanıcı başarıyla bulundu.","alert-success");
                 ui.showProfile(data.profile);
                 ui.showRepos(data.repos);
             }
@@ -53,6 +54,6 @@ function getInput(){
         return;
     }
 
-    alert("form boş olmaz");
+    ui.showAlert("Form alanı boş olmaz.","alert-info");
     
 }
